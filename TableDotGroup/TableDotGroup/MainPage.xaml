@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:TableDotGroup"
+             x:Class="TableDotGroup.MainPage"
+             BackgroundColor="#1f4687"
+             Title= "Startseite"
+             NavigationPage.HasNavigationBar="False">  
+
+
+    <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+        <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+            
+            <Label Margin="5,0,5,15" Text="Willkommen bei Table.Group!" TextColor="White" FontAttributes="Bold" FontSize="Large" HorizontalTextAlignment="Center"/>
+            <Image x:Name="logo" HorizontalOptions="Center" Margin="0,30,0,30"/>
+        </StackLayout>
+        
+        <StackLayout >
+            <Label Text="Erstellen Sie innerhalb weniger Minuten Tischgruppen für Ihre Schulklasse!" TextColor="White" HorizontalTextAlignment="Center"/>
+            <Button Margin="0,15,0,0" Text="Roll the Dice" Clicked="Button_Clicked" HorizontalOptions="Center"/>
+            
+        </StackLayout>
+    </StackLayout>
+
+</ContentPage>
