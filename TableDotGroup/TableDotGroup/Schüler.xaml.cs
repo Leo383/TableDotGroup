@@ -15,7 +15,10 @@ namespace TableDotGroup
 		public Schüler ()
 		{
 			InitializeComponent ();
+
+           
 		}
+    
 
         private async void Button_Clicked(object sender, EventArgs e)
         {
