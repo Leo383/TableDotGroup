@@ -4,9 +4,12 @@
              x:Class="TableDotGroup.Tischgruppen"
              Title="Tischgruppen">
 
-    <StackLayout>
-        <Label Text="Wie viele Tischruppen soll es am Ende geben?"/>
-        <Stepper Margin="25,100,0,0" Maximum="15" Minimum="1" ValueChanged="Stepper_ValueChanged"/>
+    <StackLayout Padding="0,50,0,0">
+        
+        <Label Text="Wie viele Tischruppen sollen erstellt werden?" HorizontalOptions="Center"/>
+        <Stepper x:Name="stepperDreier" InputTransparent="False" Margin="0,50,0,0" Maximum="15" Minimum="1" ValueChanged="Stepper_ValueChanged" HorizontalOptions="Center"/>
+        <Label HorizontalOptions="Center" Text="{Binding Source={x:Reference stepperDreier}, Path=Value}" FontSize="18"/>
     </StackLayout>
+    
 
 </ContentPage>

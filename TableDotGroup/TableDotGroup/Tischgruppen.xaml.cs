@@ -15,12 +15,13 @@ namespace TableDotGroup
 		public Tischgruppen ()
 		{
 			InitializeComponent ();
-            double t3 = 
+            
 		}
 
         private void Stepper_ValueChanged(object sender, ValueChangedEventArgs e)
         {
-            
+            var tischgruppenAnzahl = e;
+
         }
     }
 }
