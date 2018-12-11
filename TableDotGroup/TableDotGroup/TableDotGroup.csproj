@@ -4,6 +4,9 @@
     <TargetFramework>netstandard2.0</TargetFramework>
     <ApplicationIcon>Minka.ico</ApplicationIcon>
     <Win32Resource />
+    <Copyright>Leonhard Keßler</Copyright>
+    <Version>1.0.1</Version>
+    <Authors>Leonhard Kessler</Authors>
   </PropertyGroup>
 
   <ItemGroup>
