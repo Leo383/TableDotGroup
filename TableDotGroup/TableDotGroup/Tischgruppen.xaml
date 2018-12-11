@@ -4,21 +4,21 @@
              x:Class="TableDotGroup.Tischgruppen"
              Title="Tischgruppen">
 
-    <StackLayout Padding="0,50,0,0">
+    <StackLayout Padding="0,15,0,0">
         
         <Label Text="Wie viele 3er Tischruppen sollen erstellt werden?" HorizontalOptions="Center"/>
         <Stepper x:Name="stepperDreier" InputTransparent="False" Margin="0,50,0,0" Maximum="15" Minimum="0" ValueChanged="StepperDreier_ValueChanged" HorizontalOptions="Center"/>
         <Label HorizontalOptions="Center" Text="{Binding Source={x:Reference stepperDreier}, Path=Value}" FontSize="18"/>
 
-        <Label Text="Wie viele 4er Tischruppen sollen erstellt werden?" HorizontalOptions="Center" Margin="0,80,0,0"/>
+        <Label Text="Wie viele 4er Tischruppen sollen erstellt werden?" HorizontalOptions="Center" Margin="0,60,0,0"/>
         <Stepper x:Name="stepperVierer" InputTransparent="False" Margin="0,50,0,0" Maximum="15" Minimum="0" ValueChanged="StepperVierer_ValueChanged" HorizontalOptions="Center"/>
         <Label HorizontalOptions="Center" Text="{Binding Source={x:Reference stepperVierer}, Path=Value}" FontSize="18"/>
 
-        <Label Text="Wie viele 5er Tischruppen sollen erstellt werden?" HorizontalOptions="Center" Margin="0,80,0,0"/>
+        <Label Text="Wie viele 5er Tischruppen sollen erstellt werden?" HorizontalOptions="Center" Margin="0,60,0,0"/>
         <Stepper x:Name="stepperFuenfer" InputTransparent="False" Margin="0,50,0,0" Maximum="15" Minimum="0" ValueChanged="StepperFuenfer_ValueChanged" HorizontalOptions="Center"/>
         <Label HorizontalOptions="Center" Text="{Binding Source={x:Reference stepperFuenfer}, Path=Value}" FontSize="18"/>
 
-        <Button Text="Auswerten" Pressed="Button_Pressed" HorizontalOptions="Center"  />
+        <Button Text="Auswerten" Pressed="Button_Pressed" HorizontalOptions="Center" VerticalOptions="EndAndExpand"  />
     </StackLayout>
     
 

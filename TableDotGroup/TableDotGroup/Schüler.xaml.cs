@@ -17,7 +17,8 @@ namespace TableDotGroup
 			InitializeComponent ();
 
             
-           
+            //var seperateNames = names.Split(',');
+            
 		}
     
 

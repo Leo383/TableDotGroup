@@ -3,10 +3,10 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="TableDotGroup.Schüler"
              Title="Schüler">
-    <StackLayout x:Name="layout" >
-        <Label x:Name="label" Text="Bitte trage die Namen der Schüler, getrennt durch Kommata ein:" FontSize="Medium" Margin="0,20,0,20" />
+    <StackLayout x:Name="layout"  Orientation="Vertical">
+        <Label x:Name="label" Text="Bitte trage die Namen der Schüler, getrennt durch Kommata ein:" FontSize="Medium" Margin="0,20,0,20" HorizontalTextAlignment="Center"/>
         <BoxView x:Name="trennung" Color="Gray" HeightRequest="2" />
-        <Editor x:Name="names" Text="Schreib etwas..."  />
-        <Button Text="Weiter" Clicked="Button_Clicked" />
+        <Editor x:Name="names" Text="Schreib etwas..." HeightRequest="400"   />
+        <Button Text="Weiter" Clicked="Button_Clicked" VerticalOptions="EndAndExpand" HorizontalOptions="Center" />
     </StackLayout>
 </ContentPage>
