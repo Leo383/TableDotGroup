@@ -10,21 +10,11 @@ using Xamarin.Forms.Xaml;
 namespace TableDotGroup
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class Schüler : ContentPage
+	public partial class Auswertung : ContentPage
 	{
-		public Schüler ()
+		public Auswertung ()
 		{
 			InitializeComponent ();
-
-            
-           
 		}
-    
-
-        private async void Button_Clicked(object sender, EventArgs e)
-        {
-            await Navigation.PushAsync(new Wuensche());
-
-        }
-    }
+	}
 }
