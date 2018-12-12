@@ -15,16 +15,42 @@ namespace TableDotGroup
 		public Schüler ()
 		{
 			InitializeComponent ();
+            
 
-            
-            //var seperateNames = names.Split(',');
-            
-		}
-    
+
+        }
+
+
+
+       
 
         private async void Button_Clicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new Wuensche());
+
+        }
+
+        private void NamesBoysStrong_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            var text1 = ((Editor)sender).Text;
+            string[] boysStrongSplit = text1.Split(',');
+            test.Text = boysStrongSplit[0];
+            
+            
+        }
+
+        private void NamesBoysWeak_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void NamesGirlsStrong_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void NamesGirlsWeak_TextChanged(object sender, TextChangedEventArgs e)
+        {
 
         }
     }
