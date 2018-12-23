@@ -12,15 +12,25 @@ namespace TableDotGroup
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class Wuensche : ContentPage
 	{
-		public Wuensche (string[] girlsSplit, string[] boysSplit)
+		public Wuensche (string[] girlsSplit, string[] boysSplit, int boysLength, int girlsLength)
 		{
 			InitializeComponent ();
 
             string[] _girlsSplit = girlsSplit;
             string[] _boysSplit = boysSplit;
 
-            names.Text = girlsSplit[1];
+
+
+            if (boysLength == 0)
+            {
+                names.Text = "Default Text";
+            }
+            else
+            {
+                names.Text = _girlsSplit[0] + _boysSplit[0];
+            }
 		}
+
 
         private async void Button_Clicked(object sender, EventArgs e)
         {

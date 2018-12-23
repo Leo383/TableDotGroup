@@ -7,6 +7,6 @@
 
         <Label x:Name="names" />
 
-        <Button Text="Weiter" HorizontalOptions="Center" VerticalOptions="End" Clicked="Button_Clicked"/>
+        <Button Text="Weiter" HorizontalOptions="Center" VerticalOptions="EndAndExpand" Clicked="Button_Clicked"/>
     </StackLayout>
 </ContentPage>

@@ -17,30 +17,47 @@ namespace TableDotGroup
 			InitializeComponent ();
             
 
+        var alertThat = DisplayAlert("Achtung", "Bitte beachte, dass alle Felder ausgefüllt sind", "Cancel");
         }
+        public int boysLength;
+        public int girlsLength;
         public string[] boysSplit;
         public string[] girlsSplit;
+        char[] charsToTrim = { ' ' };
+        
 
 
         private void NamesBoys_Completed(object sender, EventArgs e)
         {
+            
             var text1 = ((Editor)sender).Text;
             boysSplit = text1.Split(',');
             jungs.Text = text1;
+            boysLength = boysSplit.Length;
         }
 
         private void NamesGirls_Completed(object sender, EventArgs e)
         {
             var text2 = ((Editor)sender).Text;
             girlsSplit = text2.Split(',');
-            text2.Trim(' ');
-            maedels.Text = girlsSplit[0] + "\n" + girlsSplit[2]; 
+            text2.Trim(charsToTrim);
+            maedels.Text = girlsSplit[0] + "\n" + girlsSplit[1];
+            girlsLength = girlsSplit.Length;
         }
 
 
         private async void Button_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new Wuensche(girlsSplit, boysSplit ));
+            
+            if (namesBoys.Text != null && namesGirls.Text != null)
+            {
+            await Navigation.PushAsync(new Wuensche(girlsSplit, boysSplit, boysLength, girlsLength ));
+
+            }
+            else
+            {
+                await DisplayAlert("Achtung", "Bitte beachte, dass alle Felder ausgefüllt sind", "Cancel");
+            }
 
         }
     }

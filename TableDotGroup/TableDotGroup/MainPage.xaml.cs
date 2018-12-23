@@ -20,7 +20,7 @@ namespace TableDotGroup
 
         async void Button_Clicked(object sender, EventArgs e)
         {                  
-            await Navigation.PushAsync(new Schüler());
+            await Navigation.PushAsync(new Abfrage());
             
         }
     }
