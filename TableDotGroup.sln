@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TableDotGroup.Android", "Ta
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TableDotGroup.iOS", "TableDotGroup\TableDotGroup.iOS\TableDotGroup.iOS.csproj", "{51C9C49A-7563-4EBA-8348-F169E1B60AB8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TableDotGroup", "TableDotGroup\TableDotGroup\TableDotGroup.csproj", "{E2E4CD95-ECCA-4F1D-A2FE-B88C0819DBEC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TableDotGroup", "TableDotGroup\TableDotGroup\TableDotGroup.csproj", "{E2E4CD95-ECCA-4F1D-A2FE-B88C0819DBEC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

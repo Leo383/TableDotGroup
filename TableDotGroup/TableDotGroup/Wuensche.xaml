@@ -3,7 +3,10 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="TableDotGroup.Wuensche"
              Title="Wünsche">
+    <StackLayout >
 
+        <Label x:Name="names" />
 
-    <Button Text="Weiter" HorizontalOptions="Center" VerticalOptions="End" Clicked="Button_Clicked"/>
+        <Button Text="Weiter" HorizontalOptions="Center" VerticalOptions="End" Clicked="Button_Clicked"/>
+    </StackLayout>
 </ContentPage>
