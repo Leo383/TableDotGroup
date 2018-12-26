@@ -26,9 +26,10 @@ namespace TableDotGroup
 
             List<string> namesGirls = _girlsSplit.ToList() ;
             List<string> namesBoys = _boysSplit.ToList();
+
             namesGirls.Sort();
-            
             namesBoys.Sort();
+            
             
             schuelerListe.ItemsSource = namesGirls.Concat(namesBoys);
             
