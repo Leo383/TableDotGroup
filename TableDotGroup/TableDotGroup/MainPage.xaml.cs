@@ -13,7 +13,7 @@ namespace TableDotGroup
 		{
 			InitializeComponent();
 
-            logo.Source = ImageSource.FromResource("TableDotGroup.Images.logo.png");
+            logo.Source = "logo.png";
 
            
         }

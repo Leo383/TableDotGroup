@@ -15,8 +15,17 @@ namespace TableDotGroup
 		public Schüler ()
 		{
 			InitializeComponent ();
-            namesBoys.Text = "Paul L., Papa, Martin, Leo, Leon";
-            namesGirls.Text = "Mona, Monica, Erika, Martina, Israelia";
+            //namesBoys.Text = "Paul L., Papa, Martin, Leo, Leon";
+            //namesGirls.Text = "Mona, Monica, Erika, Martina, Israelia";
+            if(namesGirls.Text == null)
+            {
+            namesGirls.Placeholder = "Please work";
+            }
+            if(namesBoys.Text == null)
+            {
+            namesBoys.Placeholder = "Please work too";
+
+            }
             
 
         var alertThat = DisplayAlert("Achtung", "Bitte beachte, dass alle Felder ausgefüllt sind", "Cancel");
@@ -34,23 +43,20 @@ namespace TableDotGroup
         private void NamesBoys_Completed(object sender, EventArgs e)
         {
             
-            text1 = ((Editor)sender).Text;
-            text1 = text1.Replace(" ","");
-            boysSplit = text1.Split(',');
-            //jungs.Text = text1;
+            text1 = ((Editor)sender).Text;            
+            boysSplit = text1.Split(',');            
             boysLength = boysSplit.Length;
             
         }
 
         private void NamesGirls_Completed(object sender, EventArgs e)
         {
-            text2 = ((Editor)sender).Text;
-            text2 = text2.Replace(" ","");
-            girlsSplit = text2.Split(',');
-            //maedels.Text = girlsSplit[0] + "\n" + girlsSplit[1];
+            text2 = ((Editor)sender).Text;            
+            girlsSplit = text2.Split(',');            
             girlsLength = girlsSplit.Length;
             
         }
+        
 
 
         private async void Button_Clicked(object sender, EventArgs e)

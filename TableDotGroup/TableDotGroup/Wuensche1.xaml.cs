@@ -21,7 +21,17 @@ namespace TableDotGroup
             InitializeComponent();
 
             var _girlsSplit = girlsSplit;
-            var _boysSplit = boysSplit;                     
+            var _boysSplit = boysSplit;  
+            
+            for (int i = 0; i < _boysSplit.Length; i++)
+            {
+                _boysSplit[i] = _boysSplit[i].TrimStart();
+            };
+
+            for (int i = 0; i < _girlsSplit.Length; i++)
+            {
+                _girlsSplit[i] = _girlsSplit[i].TrimStart();
+            };
 
 
             List<string> namesGirls = _girlsSplit.ToList() ;
