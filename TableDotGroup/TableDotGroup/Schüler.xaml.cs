@@ -15,6 +15,8 @@ namespace TableDotGroup
 		public Schüler ()
 		{
 			InitializeComponent ();
+            namesBoys.Text = "Paul, Papa, Martin, Leo, Leon";
+            namesGirls.Text = "Mona, Monica, Erika, Martina, Israelia";
             
 
         var alertThat = DisplayAlert("Achtung", "Bitte beachte, dass alle Felder ausgefüllt sind", "Cancel");
@@ -24,25 +26,35 @@ namespace TableDotGroup
         public string[] boysSplit;
         public string[] girlsSplit;
         char[] charsToTrim = { ' ' };
+        string text1;
+        string text2;
         
 
 
         private void NamesBoys_Completed(object sender, EventArgs e)
         {
             
-            var text1 = ((Editor)sender).Text;
+            text1 = ((Editor)sender).Text;
             boysSplit = text1.Split(',');
             jungs.Text = text1;
             boysLength = boysSplit.Length;
+            for(int i = 0; i < boysLength; i++)
+            {
+                Console.WriteLine(boysSplit[i] + "\n");
+            }
         }
 
         private void NamesGirls_Completed(object sender, EventArgs e)
         {
-            var text2 = ((Editor)sender).Text;
-            girlsSplit = text2.Split(',');
+            text2 = ((Editor)sender).Text;
             text2.Trim(charsToTrim);
+            girlsSplit = text2.Split(',');
             maedels.Text = girlsSplit[0] + "\n" + girlsSplit[1];
             girlsLength = girlsSplit.Length;
+            for (int i = 0; i < boysLength; i++)
+            {
+                Console.WriteLine(girlsSplit[i] + "\n");
+            }
         }
 
 
@@ -51,7 +63,7 @@ namespace TableDotGroup
             
             if (namesBoys.Text != null && namesGirls.Text != null)
             {
-            await Navigation.PushAsync(new Wuensche(girlsSplit, boysSplit, boysLength, girlsLength ));
+            await Navigation.PushAsync(new Wuensche1(girlsSplit, boysSplit, boysLength, girlsLength, text1, text2 ));
 
             }
             else

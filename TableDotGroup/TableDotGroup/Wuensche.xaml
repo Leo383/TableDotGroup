@@ -4,8 +4,8 @@
              x:Class="TableDotGroup.Wuensche"
              Title="Wünsche">
     <StackLayout >
+        <ListView x:Name="schuelerListe" />
 
-        <Label x:Name="names" />
 
         <Button Text="Weiter" HorizontalOptions="Center" VerticalOptions="EndAndExpand" Clicked="Button_Clicked"/>
     </StackLayout>
