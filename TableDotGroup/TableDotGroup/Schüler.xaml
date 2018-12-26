@@ -12,11 +12,11 @@
         
             <StackLayout x:Name="editors"  >
                 
-                <Label Text="Jungs E-Kurs:" FontSize="Medium"/>
+                <Label Text="Jungs:" FontSize="Medium"/>
                 <Editor x:Name="namesBoys" HeightRequest="100" Completed="NamesBoys_Completed"/>
                           
            
-                <Label Text="Mädchen E-Kurs:" FontSize="Medium"/>
+                <Label Text="Mädchen:" FontSize="Medium"/>
                 <Editor x:Name="namesGirls" HeightRequest="100" Completed="NamesGirls_Completed" />
 
             <Label x:Name="jungs" />

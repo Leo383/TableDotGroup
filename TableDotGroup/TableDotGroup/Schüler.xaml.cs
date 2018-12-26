@@ -15,7 +15,7 @@ namespace TableDotGroup
 		public Schüler ()
 		{
 			InitializeComponent ();
-            namesBoys.Text = "Paul, Papa, Martin, Leo, Leon";
+            namesBoys.Text = "Paul L., Papa, Martin, Leo, Leon";
             namesGirls.Text = "Mona, Monica, Erika, Martina, Israelia";
             
 
@@ -35,26 +35,21 @@ namespace TableDotGroup
         {
             
             text1 = ((Editor)sender).Text;
+            text1 = text1.Replace(" ","");
             boysSplit = text1.Split(',');
-            jungs.Text = text1;
+            //jungs.Text = text1;
             boysLength = boysSplit.Length;
-            for(int i = 0; i < boysLength; i++)
-            {
-                Console.WriteLine(boysSplit[i] + "\n");
-            }
+            
         }
 
         private void NamesGirls_Completed(object sender, EventArgs e)
         {
             text2 = ((Editor)sender).Text;
-            text2.Trim(charsToTrim);
+            text2 = text2.Replace(" ","");
             girlsSplit = text2.Split(',');
-            maedels.Text = girlsSplit[0] + "\n" + girlsSplit[1];
+            //maedels.Text = girlsSplit[0] + "\n" + girlsSplit[1];
             girlsLength = girlsSplit.Length;
-            for (int i = 0; i < boysLength; i++)
-            {
-                Console.WriteLine(girlsSplit[i] + "\n");
-            }
+            
         }
 
 

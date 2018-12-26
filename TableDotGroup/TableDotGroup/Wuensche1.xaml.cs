@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
+
 namespace TableDotGroup
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
@@ -22,16 +23,26 @@ namespace TableDotGroup
             var _girlsSplit = girlsSplit;
             var _boysSplit = boysSplit;
 
-            List<string> names = girlsSplit.ToList() ;
-            List<string> namesBoys = boysSplit.ToList();
-            names.Sort();
+            for(int i = 0; i < _girlsSplit.Length; i++) {
+                _girlsSplit[i].Trim();
+            }
+            for (int i = 0; i < _boysSplit.Length; i++)
+            {
+                _boysSplit[i].Trim(' ');
+            }
+
+
+            List<string> namesGirls = _girlsSplit.ToList() ;
+            List<string> namesBoys = _boysSplit.ToList();
+            namesGirls.Sort();
+            
             namesBoys.Sort();
             
-            schuelerListe.ItemsSource = names;
+            schuelerListe.ItemsSource = namesGirls.Concat(namesBoys);
             //schuelerListe.ItemsSource.Add(namesBoys);
 
-            
         }
+            
 
 
         async void Handle_ItemTapped(object sender, ItemTappedEventArgs e)
@@ -43,6 +54,11 @@ namespace TableDotGroup
 
             //Deselect Item
             ((ListView)sender).SelectedItem = null;
+        }
+
+        private async void Button_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new Tischgruppen());
         }
     }
 }
