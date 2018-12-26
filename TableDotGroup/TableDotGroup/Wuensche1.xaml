@@ -14,7 +14,7 @@
             <DataTemplate>
                 <TextCell Text="{Binding .}" />
             </DataTemplate>
-        </ListView.ItemTemplate>
+        </ListView.ItemTemplate> 
 
 
     </ListView>

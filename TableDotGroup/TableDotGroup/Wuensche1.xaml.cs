@@ -21,15 +21,7 @@ namespace TableDotGroup
             InitializeComponent();
 
             var _girlsSplit = girlsSplit;
-            var _boysSplit = boysSplit;
-
-            for(int i = 0; i < _girlsSplit.Length; i++) {
-                _girlsSplit[i].Trim();
-            }
-            for (int i = 0; i < _boysSplit.Length; i++)
-            {
-                _boysSplit[i].Trim(' ');
-            }
+            var _boysSplit = boysSplit;                     
 
 
             List<string> namesGirls = _girlsSplit.ToList() ;
@@ -39,7 +31,7 @@ namespace TableDotGroup
             namesBoys.Sort();
             
             schuelerListe.ItemsSource = namesGirls.Concat(namesBoys);
-            //schuelerListe.ItemsSource.Add(namesBoys);
+            
 
         }
             
