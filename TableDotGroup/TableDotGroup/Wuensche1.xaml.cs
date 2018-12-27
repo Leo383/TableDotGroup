@@ -30,7 +30,7 @@ namespace TableDotGroup
 
             for (int i = 0; i < _girlsSplit.Length; i++)
             {
-                _girlsSplit[i] = _girlsSplit[i].TrimStart();
+                _girlsSplit[i] = _girlsSplit[i].TrimStart();               
             };
 
 

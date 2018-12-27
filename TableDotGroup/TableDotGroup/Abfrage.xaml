@@ -4,8 +4,11 @@
              x:Class="TableDotGroup.Abfrage"
              Title="Auswahl">
     <StackLayout>
+        <Label Text="Neue Schülerliste erstellen:" HorizontalTextAlignment="Center" FontSize="Medium" Margin="0,30,0,0"/>
+        <Button x:Name="add" Text="Hi" Pressed="Button_Pressed" />
+        <Image Source="add.png"/>
 
-
-        <Button Text="Weiter"  HorizontalOptions="Center" VerticalOptions="EndAndExpand" Pressed="Button_Pressed"/>
+        <Label Text="Ich habe bereits eine Klasse erstellt:" HorizontalTextAlignment="Center" Margin="0,30,0,0" FontSize="Medium"/>
+        <Button Text="Weiter" HorizontalOptions="Center"/>
     </StackLayout>
 </ContentPage>

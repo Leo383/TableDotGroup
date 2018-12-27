@@ -12,7 +12,7 @@
         <!--Built in Cells-->
         <ListView.ItemTemplate>
             <DataTemplate>
-                <TextCell Text="{Binding .}" TextColor="Blue" />
+                <TextCell Text="{Binding .}"  />
             </DataTemplate>
         </ListView.ItemTemplate> 
 
