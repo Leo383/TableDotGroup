@@ -3,7 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="TableDotGroup.Tischgruppen"
              Title="Tischgruppen">
-
+    <ScrollView>
+        
     <StackLayout Padding="0,15,0,0">
         
         <Label Text="Wie viele 3er Tischruppen sollen erstellt werden?" HorizontalOptions="Center"/>
@@ -18,8 +19,13 @@
         <Stepper x:Name="stepperFuenfer" InputTransparent="False" Margin="0,50,0,0" Maximum="15" Minimum="0" ValueChanged="StepperFuenfer_ValueChanged" HorizontalOptions="Center"/>
         <Label HorizontalOptions="Center" Text="{Binding Source={x:Reference stepperFuenfer}, Path=Value}" FontSize="18"/>
 
-        <Button Text="Auswerten" Pressed="Button_Pressed" HorizontalOptions="Center" VerticalOptions="EndAndExpand"  />
+        <Label Text="Wie viele 6er Tischruppen sollen erstellt werden?" HorizontalOptions="Center" Margin="0,60,0,0"/>
+        <Stepper x:Name="stepperSechser" InputTransparent="False" Margin="0,50,0,0" Maximum="15" Minimum="0" ValueChanged="StepperSechser_ValueChanged" HorizontalOptions="Center"/>
+        <Label HorizontalOptions="Center" Text="{Binding Source={x:Reference stepperSechser}, Path=Value}" FontSize="18"/>
+
+            <Button Text="Auswerten" Pressed="Button_Pressed" HorizontalOptions="Center" VerticalOptions="EndAndExpand"  />
     </StackLayout>
+    </ScrollView>
     
 
 </ContentPage>

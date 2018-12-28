@@ -3,7 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="TableDotGroup.Schüler"
              Title="Schüler">
-   
+    <ScrollView>
+        
      <StackLayout x:Name="layout">
         
             <Label x:Name="label" Text="Bitte trage die Namen der Schüler, getrennt durch Kommata ein:" FontSize="Medium" Margin="0,20,0,20" HorizontalTextAlignment="Center"/>
@@ -26,5 +27,6 @@
         <Button Text="Weiter" Clicked="Button_Clicked" VerticalOptions="EndAndExpand" HorizontalOptions="Center" />
          
     </StackLayout>
+    </ScrollView>
     
 </ContentPage>

@@ -9,6 +9,6 @@
         <Button x:Name="add" Text="Weiter" HorizontalOptions="Center" Pressed="Button_Pressed" />
 
         <Label Text="Ich habe bereits eine Klasse erstellt:" HorizontalTextAlignment="Center" Margin="0,30,0,0" FontSize="Medium"/>
-        <Button Text="Weiter" HorizontalOptions="Center"/>
+        <Button Text="Weiter" HorizontalOptions="Center" Clicked="Button_Clicked"/>
     </StackLayout>
 </ContentPage>

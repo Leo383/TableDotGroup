@@ -16,6 +16,9 @@ namespace TableDotGroup
     {
         public ObservableCollection<string> Items { get; set; }
 
+        public List<string> _namesGirls;
+        public List<string> _namesBoys;
+
         public Wuensche1(string[] girlsSplit, string[] boysSplit, int boysLength, int girlsLength, string text1, string text2)
         {
             InitializeComponent();
@@ -33,18 +36,18 @@ namespace TableDotGroup
                 _girlsSplit[i] = _girlsSplit[i].TrimStart();               
             };
 
-
             List<string> namesGirls = _girlsSplit.ToList() ;
             List<string> namesBoys = _boysSplit.ToList();
-
             namesGirls.Sort();
             namesBoys.Sort();
             
             
             schuelerListe.ItemsSource = namesGirls.Concat(namesBoys);
-            
+            _namesBoys = namesBoys;
+            _namesGirls = namesGirls;
             
         }
+        
             
 
 
@@ -62,7 +65,8 @@ namespace TableDotGroup
         private async void Button_Clicked(object sender, EventArgs e)
         {
             //var savedList = JsonConvert.SerializeObject(schuelerListe); Converts List into TextFile
-            await Navigation.PushAsync(new Tischgruppen());
+            await Navigation.PushAsync(new Tischgruppen( _namesGirls, _namesBoys));
+           
         }
     }
 }

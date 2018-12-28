@@ -22,5 +22,10 @@ namespace TableDotGroup
         {
             await Navigation.PushAsync(new Schüler());
         }
+
+        private async void Button_Clicked(object sender, EventArgs e)
+        {
+            await DisplayAlert("Information", "Erst in Zukunft wird dieser Button bearbeitet", "OK");
+        }
     }
 }

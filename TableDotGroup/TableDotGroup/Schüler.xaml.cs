@@ -17,21 +17,20 @@ namespace TableDotGroup
 			InitializeComponent ();
 
 
-            namesBoys.Placeholder = "Paul, Martin, ...";
-            namesBoys.AutoSize = EditorAutoSizeOption.TextChanges;
-            namesBoys.Keyboard = Keyboard.Create(KeyboardFlags.CapitalizeWord);
+            //namesBoys.Placeholder = "Paul, Martin, ...";
+            //namesBoys.AutoSize = EditorAutoSizeOption.TextChanges;
+            //namesBoys.Keyboard = Keyboard.Create(KeyboardFlags.CapitalizeWord);
 
-            namesGirls.Placeholder = "Erika, Martina, ...";
-            namesGirls.AutoSize = EditorAutoSizeOption.TextChanges;
-            namesGirls.Keyboard = Keyboard.Create(KeyboardFlags.CapitalizeWord);
+            //namesGirls.Placeholder = "Erika, Martina, ...";
+            //namesGirls.AutoSize = EditorAutoSizeOption.TextChanges;
+            //namesGirls.Keyboard = Keyboard.Create(KeyboardFlags.CapitalizeWord);
             
         }
 
         public int boysLength;
         public int girlsLength;
         public string[] boysSplit;
-        public string[] girlsSplit;
-        char[] charsToTrim = { ' ' };
+        public string[] girlsSplit;        
         string text1;
         string text2;
         
