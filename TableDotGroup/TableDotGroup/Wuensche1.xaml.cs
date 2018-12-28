@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-
+using Newtonsoft.Json;
 
 namespace TableDotGroup
 {
@@ -43,7 +43,7 @@ namespace TableDotGroup
             
             schuelerListe.ItemsSource = namesGirls.Concat(namesBoys);
             
-
+            
         }
             
 
@@ -61,6 +61,7 @@ namespace TableDotGroup
 
         private async void Button_Clicked(object sender, EventArgs e)
         {
+            //var savedList = JsonConvert.SerializeObject(schuelerListe); Converts List into TextFile
             await Navigation.PushAsync(new Tischgruppen());
         }
     }

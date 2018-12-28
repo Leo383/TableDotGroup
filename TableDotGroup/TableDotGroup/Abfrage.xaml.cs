@@ -15,7 +15,7 @@ namespace TableDotGroup
         public Abfrage()
         {
             InitializeComponent();
-            add.Image = "add.png";
+            
         }
 
         private async void Button_Pressed(object sender, EventArgs e)
