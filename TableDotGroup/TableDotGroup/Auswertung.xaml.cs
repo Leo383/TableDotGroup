@@ -12,13 +12,29 @@ namespace TableDotGroup
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class Auswertung : ContentPage
 	{
+        static Random random = new Random();
         public double freieSitze;
-		public Auswertung (List<string> namesGirls, List<string> namesBoys, double tischgruppenDreier, double tischgruppenVierer, double tischgruppenFuenfer, double tischgruppenSechser)
+        public int m;
+        public int f;
+		public Auswertung (List<string> namesGirls, List<string> namesBoys, double tischgruppenDreier, double tischgruppenVierer, double tischgruppenFuenfer, double tischgruppenSechser, double freieSitze)
 		{
 			InitializeComponent ();
-            //print.Text = tischgruppenDreier.ToString() + tischgruppenVierer.ToString() + tischgruppenFuenfer.ToString() + tischgruppenSechser.ToString();
-            freieSitze = tischgruppenDreier * 3 + tischgruppenVierer * 4 + tischgruppenFuenfer * 5 + tischgruppenSechser * 6;
+
             print.Text = freieSitze.ToString();
+            namesBoys[1].ToString();
+
+
+            
+            m = random.Next(0, namesBoys.Count());
+            f = random.Next(0, namesGirls.Count());
+            
+            
+            while(namesBoys.Count() > 0)
+            {
+                var picked = namesBoys[m];
+                namesBoys.Remove(picked);
+            }
+            
 		}
 	}
 }

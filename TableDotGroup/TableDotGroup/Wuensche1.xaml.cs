@@ -18,6 +18,8 @@ namespace TableDotGroup
 
         public List<string> _namesGirls;
         public List<string> _namesBoys;
+        public int _boysLength;
+        public int _girlsLength;
 
         public Wuensche1(string[] girlsSplit, string[] boysSplit, int boysLength, int girlsLength, string text1, string text2)
         {
@@ -45,6 +47,8 @@ namespace TableDotGroup
             schuelerListe.ItemsSource = namesGirls.Concat(namesBoys);
             _namesBoys = namesBoys;
             _namesGirls = namesGirls;
+            _boysLength = boysLength;
+            _girlsLength = girlsLength;
             
         }
         
@@ -65,7 +69,7 @@ namespace TableDotGroup
         private async void Button_Clicked(object sender, EventArgs e)
         {
             //var savedList = JsonConvert.SerializeObject(schuelerListe); Converts List into TextFile
-            await Navigation.PushAsync(new Tischgruppen( _namesGirls, _namesBoys));
+            await Navigation.PushAsync(new Tischgruppen( _namesGirls, _namesBoys, _boysLength, _girlsLength));
            
         }
     }

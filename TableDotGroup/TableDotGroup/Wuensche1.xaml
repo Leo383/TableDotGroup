@@ -7,7 +7,8 @@
     <ListView x:Name="schuelerListe"
                 ItemsSource="{Binding Items}"
                 ItemTapped="Handle_ItemTapped"
-                CachingStrategy="RecycleElement">
+                CachingStrategy="RecycleElement"
+              VerticalOptions="FillAndExpand">
 
         <!--Built in Cells-->
         <ListView.ItemTemplate>
