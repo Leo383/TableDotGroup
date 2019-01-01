@@ -15,17 +15,23 @@ namespace TableDotGroup
         public Abfrage()
         {
             InitializeComponent();
-            
         }
 
-        private async void Button_Pressed(object sender, EventArgs e)
+        private async void Add_Clicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new Schüler());
         }
 
-        private async void Button_Clicked(object sender, EventArgs e)
+        private async void Clock_Clicked(object sender, EventArgs e)
         {
-            await DisplayAlert("Information", "Erst in Zukunft wird dieser Button bearbeitet", "OK");
+            await DisplayAlert("Info", "In Zukunft", "OK");
+
         }
-    }
+
+        private async void Dice_Clicked(object sender, EventArgs e)
+        {
+            await DisplayAlert("Info", "In Zukunft", "OK");
+
+        }
+    }   
 }

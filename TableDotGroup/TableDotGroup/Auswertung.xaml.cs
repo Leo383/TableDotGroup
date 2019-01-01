@@ -31,8 +31,10 @@ namespace TableDotGroup
             
             while(namesBoys.Count() > 0)
             {
-                var picked = namesBoys[m];
+                var picked = namesBoys[random.Next(0, namesBoys.Count())];
                 namesBoys.Remove(picked);
+
+                print.Text = picked;
             }
             
 		}

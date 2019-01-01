@@ -17,16 +17,16 @@ namespace TableDotGroup
 			InitializeComponent ();
 
 
-            //namesBoys.Placeholder = "Paul, Martin, ...";
-            //namesBoys.AutoSize = EditorAutoSizeOption.TextChanges;
-            //namesBoys.Keyboard = Keyboard.Create(KeyboardFlags.CapitalizeWord);
+            namesBoys.Placeholder = "Paul, Martin, ...";
+            namesBoys.AutoSize = EditorAutoSizeOption.TextChanges;
+            namesBoys.Keyboard = Keyboard.Create(KeyboardFlags.CapitalizeWord);
 
-            //namesGirls.Placeholder = "Erika, Martina, ...";
-            //namesGirls.AutoSize = EditorAutoSizeOption.TextChanges;
-            //namesGirls.Keyboard = Keyboard.Create(KeyboardFlags.CapitalizeWord);
-            namesBoys.Text = "Leonhard, Luca, Martin, Erik, Matthias, Michael, Jonathan, Nico, Justus, Moritz, Lür, Mario, Fabian";
-            namesGirls.Text = "Verena, Luisa, Josephine, Marie, Lili, Zoé, Katharina, Erika, Martina, Ciara, Malie, Anna";
-            
+            namesGirls.Placeholder = "Erika, Martina, ...";
+            namesGirls.AutoSize = EditorAutoSizeOption.TextChanges;
+            namesGirls.Keyboard = Keyboard.Create(KeyboardFlags.CapitalizeWord);
+            //namesBoys.Text = "Leonhard, Luca, Martin, Erik, Matthias, Michael, Jonathan, Nico, Justus, Moritz, Lür, Mario, Fabian";
+            //namesGirls.Text = "Verena, Luisa, Josephine, Marie, Lili, Zoé, Katharina, Erika, Martina, Ciara, Malie, Anna";
+
         }
 
         public int boysLength;
