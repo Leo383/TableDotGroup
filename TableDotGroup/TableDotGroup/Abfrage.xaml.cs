@@ -30,7 +30,7 @@ namespace TableDotGroup
 
         private async void Dice_Clicked(object sender, EventArgs e)
         {
-            await DisplayAlert("Info", "In Zukunft", "OK");
+            await Navigation.PushAsync(new Draw());
 
         }
     }   

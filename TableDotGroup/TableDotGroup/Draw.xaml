@@ -3,12 +3,10 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="TableDotGroup.Draw">
     <StackLayout>
-        <Picker>
-            <Picker.Items>
-                
-            </Picker.Items>
+        <Label Text="Wählen Sie die Klasse aus, aus welcher Sie einen zufälligen Schüler ziehen möchten" FontSize="Medium" HorizontalTextAlignment="Center"/>
+        <Picker x:Name="pickClass"/>
 
-        </Picker>
-        
+
+
     </StackLayout>
 </ContentPage>
