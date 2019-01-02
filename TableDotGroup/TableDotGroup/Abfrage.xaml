@@ -6,15 +6,15 @@
     <ScrollView>
         <StackLayout>
             
-            <ImageButton x:Name="add" Source="add.png" Margin="0,30,0,0" BackgroundColor="Transparent" Clicked="Add_Clicked" Scale="0.5" />
+            <ImageButton x:Name="add" Source="add.png" Margin="0,30,0,0" BackgroundColor="Transparent" Clicked="Add_Clicked" />
             <Label Text="Neue Schülerliste erstellen" HorizontalTextAlignment="Center" FontSize="Medium" />
             
 
-            <ImageButton x:Name="history" Source="history64.png"  Margin="0,30,0,0" BackgroundColor="Transparent" Clicked="Clock_Clicked" Scale="0.5"/>
+            <ImageButton x:Name="history" Source="history64.png"  Margin="0,30,0,0" BackgroundColor="Transparent" Clicked="Clock_Clicked" />
             <Label Text="Ich habe bereits eine Klasse erstellt" HorizontalTextAlignment="Center" FontSize="Medium"/>
             
 
-            <ImageButton x:Name="dice" Source="dice.png" Margin="0,30,0,0" BackgroundColor="Transparent" Clicked="Dice_Clicked" Scale="0.5"/>
+            <ImageButton x:Name="dice" Source="dice.png" Margin="0,30,0,0" BackgroundColor="Transparent" Clicked="Dice_Clicked" />
             <Label Text="Zufällig einen Schüler auswählen" HorizontalOptions="Center" FontSize="Medium" />
             
         </StackLayout>
