@@ -16,7 +16,7 @@
 
             <ImageButton x:Name="dice" Source="dice.png" Margin="0,30,0,0" BackgroundColor="Transparent" Clicked="Dice_Clicked" />
             <Label Text="Zufällig einen Schüler auswählen" HorizontalOptions="Center" FontSize="Medium" />
-            
+            <Button Text="Weiter" Clicked="Add_Clicked"/>
         </StackLayout>
     </ScrollView>
 </ContentPage>

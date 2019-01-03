@@ -42,6 +42,8 @@ namespace TableDotGroup
             List<string> namesBoys = _boysSplit.ToList();
             namesGirls.Sort();
             namesBoys.Sort();
+
+            
             
             
             schuelerListe.ItemsSource = namesGirls.Concat(namesBoys);
@@ -60,7 +62,7 @@ namespace TableDotGroup
             if (e.Item == null)
                 return;
 
-            await DisplayAlert("Item Tapped", "An item was tapped.", "OK");
+            await DisplayAlert("Item ausgewählt", "Wünsche der Schüler folgen in weiteren Updates", "OK");
 
             //Deselect Item
             ((ListView)sender).SelectedItem = null;

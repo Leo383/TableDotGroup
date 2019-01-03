@@ -1,9 +1,20 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="TableDotGroup.Auswertung">
+             x:Class="TableDotGroup.Auswertung"
+             Title="Auswertung">
     <StackLayout>
-        <Label x:Name="print"/>
+        <Label x:Name="title3" Text="Dreier Tischgruppen:" FontSize="Medium" HorizontalTextAlignment="Center"/>
+        <Label x:Name="TablesThree" />
+
+        <Label x:Name="title4" Text="Vierer Tischgruppen:" FontSize="Medium" HorizontalTextAlignment="Center"/>
+        <Label x:Name="TablesFour" />
+
+        <Label x:Name="title5" Text="Fünfer Tischgruppen:" FontSize="Medium" HorizontalTextAlignment="Center"/>
+        <Label x:Name="TablesFive" />
+
+        <Label x:Name="title6" Text="Sechser Tischgruppen:" FontSize="Medium" HorizontalTextAlignment="Center"/>
+        <Label x:Name="TablesSix" />
 
     </StackLayout>
 </ContentPage>

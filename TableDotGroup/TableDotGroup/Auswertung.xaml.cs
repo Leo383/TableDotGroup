@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using System.Text.RegularExpressions;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -13,91 +13,174 @@ namespace TableDotGroup
     public partial class Auswertung : ContentPage
     {
         static Random random = new Random();
-        public double freieSitze;
-        public int m;
-        public int f;
-        public double dreierTischFrei;
+        public string groupsOfThree;
+        public string groupsOfFour;
+        public string groupsOfFive;
+        public string groupsOfSix;
 
 
-        public class TischDrei
-        {
-            public string student;
-        }
 
-        public class TischVier
-        {
-            public string student;
-        }
 
-        public class TischFuenf
-        {
-            public string student;
-        }
 
-        public class TischSechs
-        {
-            public string student;
-        }
-
-        
-		public Auswertung (List<string> namesGirls, List<string> namesBoys, double tischgruppenDreier, double tischgruppenVierer, double tischgruppenFuenfer, double tischgruppenSechser, double freieSitze)
+        public Auswertung (List<string> namesGirls, List<string> namesBoys, double tischgruppenDreier, double tischgruppenVierer, double tischgruppenFuenfer, double tischgruppenSechser, double freieSitze)
 		{
 			InitializeComponent ();
+            var list = new PersonList();
+            
+            
 
+            
 
-
-            for (int i = 0; i < tischgruppenDreier; i++)    //Group of 3
+            for (int i = 0; i < namesBoys.Count(); i++)
             {
-
-                for (int j = 0; j < 4; j++)
-                {
-                    var picked = namesBoys[random.Next(0, namesBoys.Count())];
-                    namesBoys.Remove(picked);
-                    picked = new TischDrei().student;
-
-                }
+                list.AddBoy(namesBoys[i]);
             }
 
-            for (int i = 0; i < tischgruppenVierer; i++) //for each group of 4
+            for (int i = 0; i < namesGirls.Count(); i++)
             {
-
-                for (int j = 0; j < 4/2; j++) //only do this two times because 50% boys
-                {
-                    var picked = namesBoys[random.Next(0, namesBoys.Count())]; 
-                    namesBoys.Remove(picked);
-                    List<string> alleTische = new List<TischVier>();
-                    TischVier t = new TischVier();
-                    t.student = picked;
-                    alleTische.Add(t.student);
-
-                }
+                list.AddGirl(namesGirls[i]);
             }
 
-            for (int i = 0; i < tischgruppenFuenfer; i++) //Fuenfer Tisch
+
+
+            for (int i = 0; i < tischgruppenVierer; i++)
             {
 
-                for (int j = 0; j < 4; j++)
-                {
-                    var picked = namesBoys[random.Next(0, namesBoys.Count())];
-                    namesBoys.Remove(picked); 
-                    picked = new TischFuenf().student;
-
-                }
+                groupsOfFour = "4: " + String.Join(", ", list.GetGroup(4)) + "\n";
+                TablesFour.Text += groupsOfFour;
             }
 
-            for (int i = 0; i < tischgruppenSechser; i++) // Sechser TIsch
+            for (int i = 0; i < tischgruppenSechser; i++)
             {
 
-                for (int j = 0; j < 4; j++)
-                {
-                    var picked = namesBoys[random.Next(0, namesBoys.Count())];
-                    namesBoys.Remove(picked);
-                    picked = new TischSechs().student;
-
-                }
+                groupsOfSix = "6: " + String.Join(", ", list.GetGroup(6)) + "\n";
+                TablesSix.Text += groupsOfSix;
             }
 
+            for(int i = 0; i < tischgruppenDreier; i++)
+            {
+
+                groupsOfThree = "3: " + String.Join(", ", list.GetGroup(3)) + "\n";
+                TablesThree.Text += groupsOfThree;
+            }
+
+
+            for (int i = 0; i < tischgruppenFuenfer; i++)
+            {
+
+                groupsOfFive = "5: " + String.Join(", ", list.GetGroup(5)) + "\n";
+                TablesFive.Text += groupsOfFive;
+                
+            }
+            
+            var getgroups = list.GetGroup(4);
+            var groupOf5 = list.GetGroup(5);
+
+            if(TablesThree.Text == null)
+            {
+                title3.IsVisible = false;
+            }
+
+            if (TablesFour.Text == null)
+            {
+                title4.IsVisible = false;
+            }
+
+            if (TablesFive.Text == null)
+            {
+                title5.IsVisible = false;
+            }
+
+            if (TablesSix.Text == null)
+            {
+                title6.IsVisible = false;
+            }
 
         }
-	}
+
+        public class PersonList
+        {
+
+
+            private List<string> boys = new List<string>();
+            private List<string> girls = new List<string>();
+
+            public void AddBoy(string name)
+            {
+                boys.Add(name);
+            }
+            public void AddGirl(string name)
+            {
+                girls.Add(name);
+            }
+
+            
+
+            public IEnumerable<string> GetGroup(int size)
+            {
+                Shuffle(boys);
+                Shuffle(girls);
+                if ((boys.Count + girls.Count) < size)
+                {
+                    throw new ArgumentException("Not enough people to satisfy group");
+                }
+                bool isBoy = rng.NextDouble() > 0.5;
+                for (var i = 0; i < size; i++)
+                {
+                    string next = "";
+                    if (isBoy)
+                    {
+                        yield return PopBoy();
+                    }
+                    else
+                    {
+                        yield return PopGirl();
+                    }
+                    isBoy = !isBoy;
+                }
+            }
+
+            private string PopBoy()
+            {
+                if (boys.Count > 0)
+                {
+                    var name = boys[0];
+                    boys.RemoveAt(0);
+                    return name;
+                }
+                else
+                {
+                    return PopGirl();
+                }
+            }
+            private string PopGirl()
+            {
+                if (girls.Count > 0)
+                {
+                    var name = girls[0];
+                    girls.RemoveAt(0);
+                    return name;
+                }
+                else
+                {
+                    return PopBoy();
+                }
+            }
+
+            private static Random rng = new Random();
+
+            private static void Shuffle<T>(IList<T> list)
+            {
+                int n = list.Count;
+                while (n > 1)
+                {
+                    n--;
+                    int k = rng.Next(n + 1);
+                    T value = list[k];
+                    list[k] = list[n];
+                    list[n] = value;
+                }
+            }
+        }
+    }
 }
