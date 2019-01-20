@@ -16,5 +16,8 @@
         <Label x:Name="title6" Text="Sechser Tischgruppen:" FontSize="Medium" HorizontalTextAlignment="Center"/>
         <Label x:Name="TablesSix" />
 
+        <Label Text="Gib deiner Klasse einen Namen:" HorizontalTextAlignment="Center" VerticalOptions="End"/>
+        <Entry x:Name="nameKlasse" Placeholder="Name der Klasse..." />
+        <Button Text="Save" Clicked="Button_Clicked" HorizontalOptions="Center"/>
     </StackLayout>
 </ContentPage>

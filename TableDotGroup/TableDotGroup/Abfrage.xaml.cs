@@ -24,13 +24,14 @@ namespace TableDotGroup
 
         private async void Clock_Clicked(object sender, EventArgs e)
         {
-            await DisplayAlert("Info", "In Zukunft", "OK");
+            await DisplayAlert("Information", "Gespeicherte Schülerlisten folgen im nächsten Update", "OK");
 
         }
 
         private async void Dice_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new Draw());
+            await DisplayAlert("Information", "Einen Schüler zufällig ziehen folgt im nächsten Update", "OK");
+            //await Navigation.PushAsync(new DrawAbfrage());
 
         }
     }   

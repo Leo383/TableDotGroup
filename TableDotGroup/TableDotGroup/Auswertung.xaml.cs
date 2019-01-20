@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Text.RegularExpressions;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using System.Collections;
 
 namespace TableDotGroup
 {
@@ -16,9 +17,8 @@ namespace TableDotGroup
         public string groupsOfThree;
         public string groupsOfFour;
         public string groupsOfFive;
-        public string groupsOfSix;
-
-
+        public string groupsOfSix;       
+        public IEnumerable<string> schuelerListe;
 
 
 
@@ -26,11 +26,13 @@ namespace TableDotGroup
 		{
 			InitializeComponent ();
             var list = new PersonList();
-            
-            
 
-            
 
+            schuelerListe = namesGirls.Concat(namesBoys);
+
+
+
+            #region Get the groups
             for (int i = 0; i < namesBoys.Count(); i++)
             {
                 list.AddBoy(namesBoys[i]);
@@ -97,7 +99,8 @@ namespace TableDotGroup
             }
 
         }
-
+        #endregion
+        #region Executed Code to ranodmize
         public class PersonList
         {
 
@@ -181,6 +184,13 @@ namespace TableDotGroup
                     list[n] = value;
                 }
             }
+        }
+        #endregion
+
+        private async void Button_Clicked(object sender, EventArgs e)
+        {
+            await DisplayAlert("Information", "Das Abspeichern von Schülerlisten folgt im nächsten Update", "OK");
+            //System.IO.File.WriteAllLines(nameKlasse.Text, schuelerListe);
         }
     }
 }

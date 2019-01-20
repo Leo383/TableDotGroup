@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionName="1.1" package="com.LipinskiKesslerKraft.TableDotGroup" android:installLocation="auto" android:versionCode="2">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionName="1.2" package="com.LipinskiKesslerKraft.TableDotGroup" android:installLocation="auto" android:versionCode="2">
 	<uses-sdk android:minSdkVersion="19" android:targetSdkVersion="27" />
 	<application android:label="TableDotGroup.Android" android:icon="@drawable/logo"></application>
 </manifest>
